@@ -11,12 +11,18 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule, MAT_DATE_LOCALE} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 import { GradimentoComponent } from './gradimento/gradimento.component';
+import { MainComponent } from './main/main.component';
+import { PagethreeComponent } from './pagethree/pagethree.component';
+import { PagefourComponent } from './pagefour/pagefour.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GradimentoComponent
+    GradimentoComponent,
+    MainComponent,
+    PagethreeComponent,
+    PagefourComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -26,6 +32,7 @@ import { GradimentoComponent } from './gradimento/gradimento.component';
     MatNativeDateModule,
     MaterialExampleModule,
     ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'it-IT'},

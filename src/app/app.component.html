@@ -1,21 +1,164 @@
+<header aria-label="Informazioni e strumenti utente">
+  <div id="agenzia-header" class="d-none d-md-block">
+    <div class="container-fluid py-md-1">
+      <p class="my-1"><a href="">Sogei</a></p>
+    </div>
+  </div>
+  <div id="page-header" class="section-primary-digito">
+    <div class="container-fluid py-3">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <!-- Logo specifico del Tema (Digito, AE(ADER), ADM, AD, GdF, MEF, MATTM, STS, GT, LDS, Didattico, ACT, EqG, PFF, it) -->
+          <img src="assets/resources/img/Digito_arancio_152.png" alt="" class="logo" />
+        </div>
+        <div class="col">
+          <h1>Heathcare Customer Satisfaction
+            <small class="mt-md-1">MongoDB Hackathon</small>
+          </h1>
+        </div>
+        <div class="col-auto">
+          <div class="d-lg-flex flex-lg-column header-links btn-rounded">
 
-      <div class="d-flex flex-row justify-content-around">
+          </div>
+        </div>
+        <div class="col-12 col-lg-auto">
+          <div id="user-info" class="mt-3 mt-lg-0 shadow">
+            <div class="row">
+              <img src="assets/resources/img/Logo.png" alt="" class="logo" />
+            </div>
 
-        <mat-form-field>
-          <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="startDate">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker [startAt]="startDate"></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput [matDatepicker]="picker2" placeholder="Choose a date" [(ngModel)]="endDate">
-          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-          <mat-datepicker #picker2 [startAt]="endDate"></mat-datepicker>
-        </mat-form-field>
-        <button class="btn btn-primary btn-sm" (click)="refreshChart()">Primary</button>
-
+          </div>
+        </div>
       </div>
-      <div class="d-flex flex-row">
-        <div #myDOMElement class="col-6" style="min-height: 500px"></div>
-   
-        <div #myDOMElement2 class="col-6"  style="min-height: 500px"></div>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Menu principale">
+  <h1 class="sr-only">Menu principale</h1>
+  <div class="navbar navbar-expand-md py-1 px-md-0">
+    <div class="container-fluid">
+      <span class="navbar-brand d-block d-md-none">Menu</span>
+      <!-- Bottone per aprire il Menu principale, visibile solo nelle risoluzioni xs e sm -->
+      <button type="button" class="navbar-toggler toggler-animate collapsed p-0" data-target="#menu-top"
+        data-toggle="collapse" aria-expanded="false">
+        <span class="sr-only">Apri menu principale</span>
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="menu-top">
+        <ul class="navbar-nav align-items-md-end">
+          <li class="nav-item text-md-center">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active"><i class="fa fa-home"
+                aria-hidden="true"></i>
+              Home</a>
+          </li>
+          <li class="nav-item text-md-center">
+
+            <a class="nav-link" routerLink="/gradimento" routerLinkActive="active"><i class="fa fa-thumbs-up mr-2"
+                aria-hidden="true"></i>Gradimento</a>
+          </li>
+          <!-- Voce con menu -->
+          <li class="nav-item text-md-center">
+            <a class="nav-link" routerLink="/pagethree" routerLinkActive="active"><i class="fa fa-tasks" aria-hidden="true"></i>
+
+              Progressi</a>
+          </li>
+          <li class="nav-item text-md-center">
+            <a class="nav-link" routerLink="/pagefour" routerLinkActive="active"><i class="fa fa-table" aria-hidden="true"></i>
+              Tabelle</a>
+          </li>
+
+        </ul>
+        <!-- Elemento per inserire il campo di ricerca 
+        <form name="" action="" class="my-3 my-md-0 ml-auto" aria-hidden="true">
+          <label for="search" class="sr-only">Cerca nel sito:</label>
+          <div class="input-group">
+            <input type="text" id="search" name="search" class="form-control" placeholder="Cerca..." />
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-default border-form">
+                <i class="fas fa-search"></i><span class="sr-only">Cerca</span>
+              </button>
+            </div>
+          </div>
+        </form>-->
       </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" class="container-fluid py-3 py-md-4">
+  <router-outlet></router-outlet>
+</main>
+
+<footer id="page-footer">
+  <div class="container-fluid py-3 py-md-4">
+    <div class="row align-items-center">
+
+      <div class="col">
+        <h1><span class="sr-only">Informazioni su </span>The BSONs' project</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <hr />
+        <span href="">Divertiamoci pensando il futuro</span>
+        <hr />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-8">
+        <h2>Recapiti e contatti</h2>
+        <hr />
+        <div class="row">
+          <div class="col-12 col-sm">
+            <p>Recapiti:
+              <br /><span class="text-white">Via Mario Carucci 99, Roma</span>
+            </p>
+          </div>
+          <div class="col-12 col-sm">
+            <p>Contatti:
+              <br /><a href="mailto:">thebsons@hackathon.it</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <h2>Seguici su</h2>
+        <hr />
+        <ul class="list-inline social btn-rounded">
+          <li class="list-inline-item">
+            <a href="https://www.sogei.it/" target="_blank" class="btn btn-primary btn-alt" title="Sogei">
+              <i class="fa fa-link"></i><span class="sr-only">Sogei: apre una nuova finestra</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://twitter.com/sogei_spa" target="_blank" class="btn btn-primary btn-alt" title="Twitter">
+              <i class="fab fa-twitter"></i><span class="sr-only">Twitter: apre una nuova finestra</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/sogei_spa/" target="_blank" class="btn btn-primary btn-alt"
+              title="Instagram">
+              <i class="fab fa-instagram"></i><span class="sr-only">Instagram: apre una nuova finestra</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.youtube.com/channel/UCrdkQ7F981U97IMZGyb5FIw" target="_blank"
+              class="btn btn-primary btn-alt" title="YouTube">
+              <i class="fab fa-youtube"></i><span class="sr-only">YouTube: apre una nuova finestra</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr />
+        <h2 class="sr-only">Altre informazioni</h2>
+        <ul class="list-inline mr-3">
+          <li class="list-inline-item"><a href="https://www.mongodb.com/">MongoDB</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
